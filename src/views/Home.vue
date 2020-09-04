@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row" id="top"></div>
+    <div class="row" id="middle">
+      <SearchBar SearchEngine='API do DuckDuckGo'/>
+    </div>
+    <div class="row" id="bottom"></div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import SearchBar from '@/components/SearchBar.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    SearchBar
   }
 }
 </script>
+
+<style>
+#middle {
+  height: 100vh;
+}
+
+#bottom {
+  position: absolute;
+  height: 25vh;
+  width: 100vw;
+  bottom: 0;
+}
+</style>
